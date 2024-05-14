@@ -1,3 +1,6 @@
+
+![Uploading ExpoFilterListDemo.gif…]()
+
 # Expo Filter List Demo
 
 Expo Filter List Demo is a React Native application that demonstrates the display and filtering of a list of users based on their types (Admin or Manager). The app fetches user data from api and allows users to filter the list by selecting a user type. The project showcases the use of Expo for building cross-platform mobile applications and includes unit tests to ensure the reliability of the codebase.
