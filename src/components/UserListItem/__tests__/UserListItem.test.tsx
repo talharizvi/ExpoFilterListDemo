@@ -13,12 +13,14 @@ describe('UserListItem component', () => {
     render(<UserListItem name={name} userType={0} />);
     expect(screen.getByText(name)).toBeDefined();
     expect(screen.getByText('Admin')).toBeDefined();
+    expect(screen.toJSON()).toMatchSnapshot();
   });
 
   it('renders user name and user type for Manager', () => {
     render(<UserListItem name={name} userType={1} />);
     expect(screen.getByText(name)).toBeDefined();
     expect(screen.getByText('Manager')).toBeDefined();
+    expect(screen.toJSON()).toMatchSnapshot();
   });
 
 });

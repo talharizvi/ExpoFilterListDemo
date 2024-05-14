@@ -7,6 +7,7 @@ describe('LineSeparator component', () => {
   it('renders correctly', () => {
     render(<LineSeparator/>)
     expect(screen.getByTestId('line-separator')).toBeDefined()
+    expect(screen.toJSON()).toMatchSnapshot();
   });
 
 });

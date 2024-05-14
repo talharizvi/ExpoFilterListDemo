@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LineSeparator component renders correctly 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#dadee6",
+      "height": 1,
+      "marginLeft": 2,
+      "marginRight": 20,
+      "marginTop": 18,
+    }
+  }
+  testID="line-separator"
+/>
+`;

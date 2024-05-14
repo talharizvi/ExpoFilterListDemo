@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryHeader component renders category text with category prop 1`] = `
+<View
+  testID="category-header"
+>
+  <Text
+    style={
+      {
+        "fontSize": 18,
+        "fontWeight": "bold",
+        "marginBottom": 8,
+        "marginTop": 16,
+      }
+    }
+  >
+    Test Category
+  </Text>
+</View>
+`;

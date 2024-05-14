@@ -9,15 +9,17 @@ describe('CustomersScreen', () => {
   it('displays loader when isLoading is true', () => {
     (useFetchUserData as jest.Mock).mockReturnValue({ listItems: [], isLoading: true });
 
-    const { getByTestId } = render(<CustomersScreen />);
+    const { toJSON, getByTestId } = render(<CustomersScreen />);
     expect(getByTestId('loader')).toBeTruthy();
+    expect(toJSON()).toMatchSnapshot();
   });
 });
 
 it('does not display loader when isLoading is false', () => {
   (useFetchUserData as jest.Mock).mockReturnValue({ listItems: [], isLoading: false });
 
-  const { queryByTestId } = render(<CustomersScreen />);
+  const { toJSON, queryByTestId } = render(<CustomersScreen />);
+  expect(toJSON()).toMatchSnapshot();
   expect(queryByTestId('loader')).toBeNull();
 });
 
@@ -35,7 +37,7 @@ test('displays user list when data is loaded', async () => {
   ];
   jest.spyOn(require('../../../hooks/useFetchUserData'), 'useFetchUserData').mockReturnValueOnce({ listItems: mockData, isLoading: false });
 
-  const { getByTestId, queryByTestId } = render(<CustomersScreen />);
+  const { toJSON, getByTestId, queryByTestId } = render(<CustomersScreen />);
 
   // Check if the loader is not present
   await waitFor(() => expect(queryByTestId('loader')).toBeNull());
@@ -53,4 +55,5 @@ test('displays user list when data is loaded', async () => {
     expect(queryByTestId('user-1')).toBeNull();
   });
 
+  expect(toJSON()).toMatchSnapshot(); 
 });

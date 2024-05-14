@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserListItem component renders user name and user type for Admin 1`] = `
+<View
+  style={
+    {
+      "marginBottom": 24,
+      "marginTop": 8,
+    }
+  }
+  testID="user-undefined"
+>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "backgroundColor": "rgba(0, 122, 255, 0.12)",
+          "borderRadius": 8,
+          "justifyContent": "center",
+          "marginRight": 14,
+          "paddingHorizontal": 12,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#5280eb",
+          }
+        }
+      >
+        J
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          {
+            "fontSize": 14,
+            "fontWeight": "600",
+          }
+        }
+      >
+        John Mill
+      </Text>
+      <Text
+        style={
+          {
+            "color": "#5e5e5d",
+          }
+        }
+      >
+        Admin
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`UserListItem component renders user name and user type for Manager 1`] = `
+<View
+  style={
+    {
+      "marginBottom": 24,
+      "marginTop": 8,
+    }
+  }
+  testID="user-undefined"
+>
+  <View
+    style={
+      {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "backgroundColor": "rgba(0, 122, 255, 0.12)",
+          "borderRadius": 8,
+          "justifyContent": "center",
+          "marginRight": 14,
+          "paddingHorizontal": 12,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "#5280eb",
+          }
+        }
+      >
+        J
+      </Text>
+    </View>
+    <View>
+      <Text
+        style={
+          {
+            "fontSize": 14,
+            "fontWeight": "600",
+          }
+        }
+      >
+        John Mill
+      </Text>
+      <Text
+        style={
+          {
+            "color": "#5e5e5d",
+          }
+        }
+      >
+        Manager
+      </Text>
+    </View>
+  </View>
+</View>
+`;

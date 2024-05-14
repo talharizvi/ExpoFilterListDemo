@@ -10,6 +10,7 @@ describe('CategoryHeader component', () => {
     
     render(<CategoryHeader category={category} />);
     expect(screen.getByText(category)).toBeDefined();
+    expect(screen.toJSON()).toMatchSnapshot();
   });
 
 });

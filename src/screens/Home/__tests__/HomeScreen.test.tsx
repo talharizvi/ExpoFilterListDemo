@@ -6,5 +6,7 @@ describe('HomeScreen', () => {
     it('renders correctly', () => {
       render(<HomeScreen/>)
       expect(screen.getByText('Empty Screen')).toBeDefined()
+      const { toJSON } = render(<HomeScreen />);
+      expect(toJSON()).toMatchSnapshot();
     });
   });
