@@ -2,13 +2,14 @@ import React from "react";
 import {Text, View, StyleSheet} from 'react-native';
 
 interface Category {
-    category: String
+    category: String,
+    testID?: string;
 }
 
 const CategoryHeader: React.FC<Category>=({category})=>{
 
     return(
-    <View>
+    <View testID='category-header'>
         <Text style={styles.categoryText}>{category}</Text>
     </View>
     );

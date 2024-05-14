@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import colors from '../constants/colors';
+import colors from '../../constants/colors';
 
 
 const HomeScreen:React.FC=()=> {

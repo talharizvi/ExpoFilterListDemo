@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import colors from '../constants/colors';
+import colors from '../../constants/colors';
 
 interface CustomRadioButtonProps {
     handleSelectedUserType:(userType:string)=>void
@@ -24,6 +24,7 @@ const CustomRadioButton:React.FC<CustomRadioButtonProps> = ({handleSelectedUserT
           onPress={() => {
             handleOptionSelect('admin')
         }}
+         testID='admin-button' 
         >
           <View
             style={styles.childView}
@@ -40,6 +41,7 @@ const CustomRadioButton:React.FC<CustomRadioButtonProps> = ({handleSelectedUserT
           onPress={() => {
             handleOptionSelect('manager')
         }}
+        testID='manager-button' 
         >
           <View
             style={styles.childView}

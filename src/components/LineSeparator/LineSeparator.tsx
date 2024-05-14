@@ -1,11 +1,9 @@
 import React from "react"
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import colors from "../constants/colors";
+import { View, StyleSheet } from 'react-native';
+import colors from "../../constants/colors";
 
 const LineSeparator: React.FC=()=>{
-    return(<View style={styles.viewStyle}>
-
-    </View>) 
+    return(<View testID="line-separator" style={styles.viewStyle}/>) 
 }
 
 const styles = StyleSheet.create({

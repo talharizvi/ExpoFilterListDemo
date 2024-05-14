@@ -1,15 +1,16 @@
 import React from "react";
 import {Text, View, StyleSheet} from 'react-native';
-import colors from "../constants/colors";
+import colors from "../../constants/colors";
 
 interface UserListItemProps{
     name: String,
-    userType: number
+    userType: number,
+    index?: number
 }
 
-const UserListItem: React.FC<UserListItemProps> = ({name, userType})=>{
+const UserListItem: React.FC<UserListItemProps> = ({name, userType, index})=>{
 
- return(<View style={styles.container}>
+ return(<View style={styles.container} testID={`user-${index}`}>
     <View style={styles.parentView}>
     
     <View style={styles.nameIconView}>

@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useCallback} from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView, ActivityIndicator } from 'react-native';
-import { useFetchUserData } from '../hooks/useFetchUserData';
-import UserListItem from '../components/UserListItem';
-import CategoryHeader from '../components/CategoryHeader';
-import CustomRadioButton from '../components/CustomRadioButton';
-import LineSeparator from '../components/LineSeparator';
-import colors from '../constants/colors';
-import { filterUsersByType } from '../utils/utils';
+import { useFetchUserData } from '../../hooks/useFetchUserData';
+import UserListItem from '../../components/UserListItem/UserListItem';
+import CategoryHeader from '../../components/CategoryHeader/CategoryHeader';
+import CustomRadioButton from '../../components/CustomRadioButton/CustomRadioButton';
+import LineSeparator from '../../components/LineSeparator/LineSeparator';
+import colors from '../../constants/colors';
+import { filterUsersByType } from '../../utils/utils';
+
 
 interface User {
     name: string;
@@ -33,17 +34,17 @@ const CustomersScreen:React.FC =()=> {
 
     if (isLoading){
         return(<View style={styles.loaderView}>
-          <ActivityIndicator color={colors.loader} size='small'/>
+          <ActivityIndicator testID='loader' color={colors.loader} size='small'/>
         </View>) 
       }
 
     return (
-      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+      <ScrollView style={styles.container} showsVerticalScrollIndicator={false} testID="customers-screen">
         <CategoryHeader category='User Types'/>
         <CustomRadioButton handleSelectedUserType={handleUserChange}/>
         <LineSeparator />
         <CategoryHeader category='Manager Users'/>
-        {filteredList.map((item: User, index: number)=><UserListItem name={item.name} userType={item.type} key={index}/>)}
+        {filteredList.length>0 && filteredList.map((item: User, index: number)=><UserListItem name={item.name} userType={item.type} key={index} index={index} />)}
         <LineSeparator />
       </ScrollView>
     );

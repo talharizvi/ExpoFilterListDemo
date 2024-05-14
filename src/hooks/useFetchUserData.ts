@@ -32,21 +32,7 @@ const useFetchUserData = ():FetchUserDataResult => {
         };
 
         fetchData();
-        // async function fetchData(){
-        //     let response = await fetch(USERS_API_URL)
-        //     let result  = await response.json()
-        //     setListItems(result?.users || [])    
-        // }
-
-        // try {
-        //     fetchData()
-        // } catch (error) {
-        //     console.log(error)
-        // } finally {
-        //     setIsLoading(false);
-        // }
     }, [])
-
    return { listItems, isLoading };
 }
 
