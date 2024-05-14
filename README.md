@@ -1,5 +1,6 @@
 
-![Uploading ExpoFilterListDemo.gif…]()
+![ExpoFilterListDemo](https://github.com/talharizvi/ExpoFilterListDemo/assets/33376398/23518834-54dc-404f-bc81-98130bd89f11)
+
 
 # Expo Filter List Demo
 
